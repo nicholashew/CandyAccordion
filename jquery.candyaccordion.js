@@ -62,7 +62,16 @@
 				}
 				
 			});
-		
+			
+			// Activate Accordion By Url Hash [Tab ID]
+	                var hash = window.location.hash;
+	                if (typeof hash !== 'undefined') {
+	                    var thash = hash.substring(hash.lastIndexOf('#'), hash.length),
+	                        accordionEle = document.getElementById(hash);
+	                    if (accordionEle) {
+	                        accordionEle.click();
+	                    }
+	                }
 		}); // End this.each
 		
 	} // End $.fn.candyaccordion
