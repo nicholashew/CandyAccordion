@@ -18,9 +18,10 @@ The following defaults can be overwritten
 
     $(document).ready(function() {
         $('#accordion').candyaccordion({
-		        speed: 250 // Animation speed in MS
-				    titleClass: 'candytitle' // Class used on the title
-				    textClass: 'candytext' // Class uesed for the text
+		        speed: 250, // Animation speed in MS
+				    titleClass: 'candytitle', // Class used on the title
+				    textClass: 'candytext', // Class uesed for the text
+			uniquedCollapse: false // setting used for enable multi collapse
 		    });
     });
 
