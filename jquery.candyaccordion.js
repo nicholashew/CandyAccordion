@@ -19,7 +19,8 @@
 		var defaults = {
 			speed: 250,
 			titleClass: 'candytitle',
-			textClass: 'candytext'
+			textClass: 'candytext',
+			uniquedCollapse: true //setting for sigle or multi collapse 
 		}
 		
 		// Defined the options that were passed in, allows overwriting of defaults
@@ -48,11 +49,15 @@
 					
 				} else {
 				
-					$('.active-' + options.textClass).slideUp(options.speed, function() {
-						$('.active-' + options.textClass).removeClass('active-' + options.textClass);
-					});
+					if (options.uniquedCollapse === true) {
+						
+						$('.active-' + options.textClass).slideUp(options.speed, function() {
+							$('.active-' + options.textClass).removeClass('active-' + options.textClass);
+						});
+						
+						$('.active-' + options.titleClass).removeClass('active-' + options.titleClass);
 					
-					$('.active-' + options.titleClass).removeClass('active-' + options.titleClass);
+					}
 					
 					$(this).addClass('active-' + options.titleClass);
 					$(this).next('div').slideToggle(options.speed, function() {
