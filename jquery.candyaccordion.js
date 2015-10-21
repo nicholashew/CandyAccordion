@@ -49,7 +49,7 @@
 					
 				} else {
 				
-					if (options.uniquedCollapse === true) {
+					if (options.uniquedCollapse) {
 						
 						$('.active-' + options.textClass).slideUp(options.speed, function() {
 							$('.active-' + options.textClass).removeClass('active-' + options.textClass);
